@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F229CE2922317BFC00A28A75 /* RootNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2822317BFC00A28A75 /* RootNavVC.swift */; };
+		F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */; };
+		F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */; };
 		F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0622316EAF00EBF655 /* AppDelegate.swift */; };
-		F2741B3F22316EB000EBF655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0B22316EAF00EBF655 /* ViewController.swift */; };
+		F2741B3F22316EB000EBF655 /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */; };
 		F2741B4622316EB000EBF655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2741B1522316EAF00EBF655 /* Assets.xcassets */; };
 		F2741B4722316EB000EBF655 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1822316EAF00EBF655 /* Constants.swift */; };
 		F2741B4822316EB000EBF655 /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1922316EAF00EBF655 /* Globel.swift */; };
@@ -45,9 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F229CE2822317BFC00A28A75 /* RootNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavVC.swift; sourceTree = "<group>"; };
+		F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
 		F2741B0422316EAE00EBF655 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2741B0622316EAF00EBF655 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2741B0B22316EAF00EBF655 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
 		F2741B1522316EAF00EBF655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2741B1822316EAF00EBF655 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2741B1922316EAF00EBF655 /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
@@ -96,6 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F229CE2722317AE800A28A75 /* NavigationVC */ = {
+			isa = PBXGroup;
+			children = (
+				F229CE2822317BFC00A28A75 /* RootNavVC.swift */,
+			);
+			path = NavigationVC;
+			sourceTree = "<group>";
+		};
+		F229CE2C223214A400A28A75 /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */,
+			);
+			path = SubClass;
+			sourceTree = "<group>";
+		};
 		F2741B0522316EAF00EBF655 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +137,7 @@
 		F2741B0822316EAF00EBF655 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -122,6 +145,7 @@
 		F2741B0922316EAF00EBF655 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F229CE2722317AE800A28A75 /* NavigationVC */,
 				F2741B0A22316EAF00EBF655 /* VC */,
 			);
 			path = Controller;
@@ -130,7 +154,7 @@
 		F2741B0A22316EAF00EBF655 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				F2741B0B22316EAF00EBF655 /* ViewController.swift */,
+				F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -201,6 +225,7 @@
 		F2741B2322316EB000EBF655 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F229CE2C223214A400A28A75 /* SubClass */,
 				F2741B2722316EB000EBF655 /* Extensions */,
 				F2741B3522316EB000EBF655 /* Refresher */,
 			);
@@ -449,8 +474,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2741B5922316EB000EBF655 /* InfiniteScroller.swift in Sources */,
-				F2741B3F22316EB000EBF655 /* ViewController.swift in Sources */,
+				F2741B3F22316EB000EBF655 /* CountryDetailVC.swift in Sources */,
 				F2741B5A22316EB000EBF655 /* DefaultInfinityAnimator.swift in Sources */,
+				F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */,
 				F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */,
 				F2741B4822316EB000EBF655 /* Globel.swift in Sources */,
 				F2741B5522316EB000EBF655 /* TextField+Extension.swift in Sources */,
@@ -459,6 +485,8 @@
 				F2741B5622316EB000EBF655 /* ArrowRefreshAnimator.swift in Sources */,
 				F2741B5822316EB000EBF655 /* PullToRefresher.swift in Sources */,
 				F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */,
+				F229CE2922317BFC00A28A75 /* RootNavVC.swift in Sources */,
+				F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */,
 				F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */,
 				F2741B4722316EB000EBF655 /* Constants.swift in Sources */,
 				F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */,
@@ -631,6 +659,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = POC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,6 +679,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = POC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
