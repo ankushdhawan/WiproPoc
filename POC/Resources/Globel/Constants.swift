@@ -1,10 +1,3 @@
-//
-//  Constants.swift
-//  JennyCraig
-//
-//  Created by gourav sharma on 6/21/18.
-//  Copyright © 2018 JennyCraig. All rights reserved.
-//
 
 import Foundation
 
@@ -15,7 +8,12 @@ import UIKit
 
 struct Constants {
 
-static var isIpad:Bool {
+    struct Indentifier
+    {
+        static let kCountryCell = "CountryCell"
+        
+    }
+    static var isIpad:Bool {
     
     return UIDevice.current.userInterfaceIdiom == .pad
     
@@ -27,11 +25,8 @@ static let appDelegate = UIApplication.shared.delegate as! AppDelegate
 }
 struct ScreenTitle
 {
-        static let kTitleSettings = "Settings"
-        static let kTitleLogin = "Login"
-
-        static let kTitleReader = "GO NFC READER"
-
+        static let kTitleSettings = ""
+    
     }
 
 

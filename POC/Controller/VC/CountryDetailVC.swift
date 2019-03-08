@@ -33,7 +33,7 @@ class CountryDetailVC: UIViewController {
     countryDescTable.dataSource = self
     countryDescTable.delegate = self
     self.view.addSubview(countryDescTable)
-    countryDescTable.register(CountryTableViewCell.self, forCellReuseIdentifier: "cell")
+    countryDescTable.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
     countryDescTable.reloadData()
     }
     private func addConstraint()
@@ -77,7 +77,7 @@ extension CountryDetailVC:UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CountryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Indentifier.kCountryCell, for: indexPath) as! CountryTableViewCell
         cell.titleLable.text = "Name of Ankush"
         cell.descriptionLable.text = "sadasdkahdsakdhkjlashdksajhdhasldhasldsaldhlasdlasdlassdasjkhdsahdsaasdjakdhaskjdhakshdkashdhasdhashdsahdhaslhdlashdlashdhasdhlashdaskdsasajkdashdaskjdhs"
         cell.imageView?.backgroundColor = UIColor.red
