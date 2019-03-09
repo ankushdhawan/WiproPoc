@@ -7,20 +7,25 @@
 //
 
 import UIKit
-
+import Kingfisher
 class CountryDetailVC: UIViewController {
     //MARK:VARIABLE DECELARATION
+    private let viewModelCountry = CountryViewModel()
+
     let countryDescTable:UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.estimatedRowHeight = 44.0
         table.rowHeight = UITableView.automaticDimension
-       return table
+        table.layoutMargins = .zero
+        table.separatorInset = .zero
+        return table
     }()
     //MARK:LIFE CYCLE
      override func viewDidLoad() {
         super.viewDidLoad()
         customInit()
+        setUpHandler()
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func viewWillLayoutSubviews() {
@@ -28,6 +33,29 @@ class CountryDetailVC: UIViewController {
     }
 
     //MARK:PRIVATE METHOD(S)
+    func setUpHandler()  {
+        
+        let servicePath = JCPostServicePath.countryDetail()
+        viewModelCountry.callWebServices(servicePath: servicePath)
+        viewModelCountry.successViewClosure = { [weak self] () in
+            DispatchQueue.main.async {
+               
+                self?.countryDescTable.reloadData()
+                //self?.navigationController?.popViewController(animated: false)
+                
+            }
+        }
+        
+        viewModelCountry.showAlertClosure = { [weak self] (messgae) in
+            DispatchQueue.main.async {
+                
+                self?.popupAlert(title:"Alert", message:"Invalid Credentail", actionTitles: ["Ok"], actions:[{action1 in
+                    }, nil])
+                
+            }
+            } as ((String) -> ())
+    }
+    
     private func customInit()
     {
     countryDescTable.dataSource = self
@@ -35,6 +63,10 @@ class CountryDetailVC: UIViewController {
     self.view.addSubview(countryDescTable)
     countryDescTable.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
     countryDescTable.reloadData()
+    countryDescTable.pullToRefresh(self) {
+            
+        }
+        
     }
     private func addConstraint()
    {
@@ -73,16 +105,15 @@ extension CountryDetailVC:UITableViewDataSource
 {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModelCountry.countryInfo?.rows.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Indentifier.kCountryCell, for: indexPath) as! CountryTableViewCell
-        cell.titleLable.text = "Name of Ankush"
-        cell.descriptionLable.text = "sadasdkahdsakdhkjlashdksajhdhasldhasldsaldhlasdlasdlassdasjkhdsahdsaasdjakdhaskjdhakshdkashdhasdhashdsahdhaslhdlashdlashdhasdhlashdaskdsasajkdashdaskjdhs"
-        cell.imageView?.backgroundColor = UIColor.red
+        cell.selectionStyle = .none
+        cell.configureView(model:viewModelCountry.countryInfo?.rows[indexPath.row])
         cell.awakeFromNib()
-       return cell
+        return cell
     }
     
     

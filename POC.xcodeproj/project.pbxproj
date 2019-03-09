@@ -13,6 +13,12 @@
 		F229CE2922317BFC00A28A75 /* RootNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2822317BFC00A28A75 /* RootNavVC.swift */; };
 		F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */; };
 		F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */; };
+		F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2F223245BA00A28A75 /* APIRequest.swift */; };
+		F229CE36223245BB00A28A75 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE30223245BB00A28A75 /* APIClient.swift */; };
+		F229CE37223245BB00A28A75 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE31223245BB00A28A75 /* MockServices.swift */; };
+		F229CE38223245BB00A28A75 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE32223245BB00A28A75 /* APIEndPoint.swift */; };
+		F229CE39223245BB00A28A75 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE33223245BB00A28A75 /* APIResponse.swift */; };
+		F229CE3A223245BB00A28A75 /* PostServicePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE34223245BB00A28A75 /* PostServicePath.swift */; };
 		F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0622316EAF00EBF655 /* AppDelegate.swift */; };
 		F2741B3F22316EB000EBF655 /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */; };
 		F2741B4622316EB000EBF655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2741B1522316EAF00EBF655 /* Assets.xcassets */; };
@@ -28,6 +34,9 @@
 		F2741B5822316EB000EBF655 /* PullToRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3822316EB000EBF655 /* PullToRefresher.swift */; };
 		F2741B5922316EB000EBF655 /* InfiniteScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3922316EB000EBF655 /* InfiniteScroller.swift */; };
 		F2741B5A22316EB000EBF655 /* DefaultInfinityAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3A22316EB000EBF655 /* DefaultInfinityAnimator.swift */; };
+		F27559382232CE5800B9C522 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559372232CE5800B9C522 /* CountryModel.swift */; };
+		F275593A2232CFEE00B9C522 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559392232CFEE00B9C522 /* CountryViewModel.swift */; };
+		F275593C2232D78E00B9C522 /* CountryDetailApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */; };
 		F27F5D0622315F3500B01605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27F5D0422315F3500B01605 /* LaunchScreen.storyboard */; };
 		F27F5D1122315F3600B01605 /* POCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1022315F3600B01605 /* POCTests.swift */; };
 		F27F5D1C22315F3600B01605 /* POCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1B22315F3600B01605 /* POCUITests.swift */; };
@@ -62,6 +71,12 @@
 		F229CE2822317BFC00A28A75 /* RootNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavVC.swift; sourceTree = "<group>"; };
 		F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
+		F229CE2F223245BA00A28A75 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		F229CE30223245BB00A28A75 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F229CE31223245BB00A28A75 /* MockServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		F229CE32223245BB00A28A75 /* APIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		F229CE33223245BB00A28A75 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		F229CE34223245BB00A28A75 /* PostServicePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostServicePath.swift; sourceTree = "<group>"; };
 		F2741B0422316EAE00EBF655 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2741B0622316EAF00EBF655 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
@@ -78,6 +93,9 @@
 		F2741B3822316EB000EBF655 /* PullToRefresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresher.swift; sourceTree = "<group>"; };
 		F2741B3922316EB000EBF655 /* InfiniteScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScroller.swift; sourceTree = "<group>"; };
 		F2741B3A22316EB000EBF655 /* DefaultInfinityAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultInfinityAnimator.swift; sourceTree = "<group>"; };
+		F27559372232CE5800B9C522 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		F27559392232CFEE00B9C522 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailApiClient.swift; sourceTree = "<group>"; };
 		F27F5CF822315F2F00B01605 /* POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F5D0522315F3500B01605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F27F5D0C22315F3600B01605 /* POCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +155,6 @@
 				2227D8DA387EBFB305A415D9 /* Pods-POCUITests.debug.xcconfig */,
 				DCBA8827B5FFC12CD352B125 /* Pods-POCUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -201,6 +218,12 @@
 		F2741B0C22316EAF00EBF655 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
+				F229CE30223245BB00A28A75 /* APIClient.swift */,
+				F229CE32223245BB00A28A75 /* APIEndPoint.swift */,
+				F229CE2F223245BA00A28A75 /* APIRequest.swift */,
+				F229CE33223245BB00A28A75 /* APIResponse.swift */,
+				F229CE31223245BB00A28A75 /* MockServices.swift */,
+				F229CE34223245BB00A28A75 /* PostServicePath.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -243,6 +266,7 @@
 		F2741B1B22316EAF00EBF655 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F27559372232CE5800B9C522 /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +274,7 @@
 		F2741B1C22316EAF00EBF655 /* ServiceClient */ = {
 			isa = PBXGroup;
 			children = (
+				F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */,
 			);
 			path = ServiceClient;
 			sourceTree = "<group>";
@@ -257,6 +282,7 @@
 		F2741B1F22316EB000EBF655 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				F27559392232CFEE00B9C522 /* CountryViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -353,13 +379,13 @@
 			children = (
 				F2741B0522316EAF00EBF655 /* AppDelegate */,
 				F2741B0922316EAF00EBF655 /* Controller */,
-				F2741B0722316EAF00EBF655 /* CustomView */,
-				F2741B2322316EB000EBF655 /* Helper */,
-				F2741B1B22316EAF00EBF655 /* Model */,
-				F2741B0C22316EAF00EBF655 /* Network Layer */,
-				F2741B1322316EAF00EBF655 /* Resources */,
 				F2741B1C22316EAF00EBF655 /* ServiceClient */,
 				F2741B1F22316EB000EBF655 /* View Models */,
+				F2741B1B22316EAF00EBF655 /* Model */,
+				F2741B0C22316EAF00EBF655 /* Network Layer */,
+				F2741B0722316EAF00EBF655 /* CustomView */,
+				F2741B2322316EB000EBF655 /* Helper */,
+				F2741B1322316EAF00EBF655 /* Resources */,
 				F27F5D0422315F3500B01605 /* LaunchScreen.storyboard */,
 				F2741B0422316EAE00EBF655 /* Info.plist */,
 			);
@@ -613,11 +639,18 @@
 			files = (
 				F2741B5922316EB000EBF655 /* InfiniteScroller.swift in Sources */,
 				F2741B3F22316EB000EBF655 /* CountryDetailVC.swift in Sources */,
+				F27559382232CE5800B9C522 /* CountryModel.swift in Sources */,
 				F2741B5A22316EB000EBF655 /* DefaultInfinityAnimator.swift in Sources */,
+				F275593A2232CFEE00B9C522 /* CountryViewModel.swift in Sources */,
+				F229CE37223245BB00A28A75 /* MockServices.swift in Sources */,
 				F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */,
+				F229CE39223245BB00A28A75 /* APIResponse.swift in Sources */,
+				F229CE3A223245BB00A28A75 /* PostServicePath.swift in Sources */,
 				F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */,
 				F2741B4822316EB000EBF655 /* Globel.swift in Sources */,
+				F229CE36223245BB00A28A75 /* APIClient.swift in Sources */,
 				F2741B5522316EB000EBF655 /* TextField+Extension.swift in Sources */,
+				F275593C2232D78E00B9C522 /* CountryDetailApiClient.swift in Sources */,
 				F2741B5722316EB000EBF655 /* UIScrollView+Infinity.swift in Sources */,
 				F2741B4922316EB000EBF655 /* ColorManager.swift in Sources */,
 				F2741B5622316EB000EBF655 /* ArrowRefreshAnimator.swift in Sources */,
@@ -627,7 +660,9 @@
 				F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */,
 				F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */,
 				F2741B4722316EB000EBF655 /* Constants.swift in Sources */,
+				F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */,
 				F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */,
+				F229CE38223245BB00A28A75 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +829,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58BAE1DB30D541E8D5C4D10C /* Pods-POC.debug.xcconfig */;
 			buildSettings = {
+				APP_ENV = Debug;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -815,6 +851,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A698F848A4899EE728DB31F /* Pods-POC.release.xcconfig */;
 			buildSettings = {
+				APP_ENV = Release;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

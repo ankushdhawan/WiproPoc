@@ -27,12 +27,12 @@ extension UITableView {
         }
     }
 
-    func endPull2RefreshAndInfiniteScrolling(count: Int?) {
-        if let count = count, count > 15 {
-            enableInfiniteScroll = true
-        } else {
-            enableInfiniteScroll = false
-        }
+    func endPull2RefreshAndInfiniteScrolling() {
+//        if let count = count, count > 15 {
+//            enableInfiniteScroll = true
+//        } else {
+//            enableInfiniteScroll = false
+//        }
         endRefreshing()
         endInfiniteScrolling()
         reloadData()

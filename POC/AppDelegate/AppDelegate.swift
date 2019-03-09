@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         let rootNavVC = RootNavVC()
         window?.rootViewController = rootNavVC
+
         return true
     }
 

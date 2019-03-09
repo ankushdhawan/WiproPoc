@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import Kingfisher
 class CountryTableViewCell: UITableViewCell {
     //MARK:DECELARTION OF OBJECTS
     var containerView:UIView = {
         var view = UIView()
+        //view.backgroundColor = UIColor.lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -34,8 +35,8 @@ class CountryTableViewCell: UITableViewCell {
     }()
     var countryImageView:ScaledHeightImageView = {
      var imageView = ScaledHeightImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "PlaceHolder")
+        imageView.contentMode = .scaleAspectFit
+      //imageView.image = UIImage(named: "PlaceHolder")
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -44,17 +45,24 @@ class CountryTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureView()
+
         addConstraint()
+
         // Initialization code
     }
     //MARK:PUBLIC METHOD(S)
-   public func configureView()
+    public func configureView(model:CountryDetailModel?)
     {
         self.addSubview(containerView)
+        containerView.addSubview(countryImageView)
         containerView.addSubview(titleLable)
         containerView.addSubview(descriptionLable)
-        containerView.addSubview(countryImageView)
+        titleLable.text = model?.title
+        descriptionLable.text = model?.description
+        let url = URL(string: model?.imageHref ?? "")
+        countryImageView.kf.indicatorType = .activity
+        countryImageView.kf.setImage(with:url)
+        
 
     }
     //MARK:PRIVATE METHOD(S)
@@ -83,7 +91,7 @@ class CountryTableViewCell: UITableViewCell {
         // SET LEADIING AND TRIALING CONSTRAINT countryImageView and titleLable
 
         let imageViewHorizontalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[countryImageView(80)]-5-[titleLable]-5-|",
+            withVisualFormat: "H:|-10-[countryImageView(100)]-5-[titleLable]-5-|",
             metrics: nil,
             views: views)
         allConstraints += imageViewHorizontalConstraints
@@ -107,7 +115,7 @@ class CountryTableViewCell: UITableViewCell {
         // SET LEADING AND TRAILING CONSTRAINT countryImageView and descriptionLable
 
         let descriptionLabelHorizontalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[countryImageView(80)]-5-[descriptionLable]-5-|",
+            withVisualFormat: "H:|-10-[countryImageView(100)]-5-[descriptionLable]-5-|",
             metrics: nil,
             views: views)
         allConstraints += descriptionLabelHorizontalConstraints
