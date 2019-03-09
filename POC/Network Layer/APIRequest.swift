@@ -75,7 +75,7 @@ extension JCAPIResource {
     
     var serviceType:ServiceType {
         
-        return .Mock
+        return .RealServer
     }
     
     var basePath:String {
@@ -119,8 +119,8 @@ extension JCAPIResource {
 }
 
 struct GenericResource : JCAPIResource {
-    
-    let path: String
+  
+let path: String
     let method: RESTMethod
     let headers: [String : String]?
     let parameters: [String : Any]?

@@ -6,11 +6,10 @@ import Alamofire
 
 protocol APIClient {
     
-    var session: URLSession { get }
     func fetch<T: Codable>(with request: JCAPIResource, decode: @escaping (Codable) -> T?, completion: @escaping (APIResponse<T, APIError>) -> Void)
 }
 
-extension APIClient {
+class APIService:APIClient {
     
     typealias JSONTaskCompletionHandler = (Codable?, APIError?) -> Void
     
@@ -65,6 +64,7 @@ extension APIClient {
     
     func fetch<T: Codable>(with request: JCAPIResource, decode: @escaping (Codable) -> T?, completion: @escaping (APIResponse<T, APIError>) -> Void) {
         
+        
       decodingTask(with: request, decodingType: T.self) { (json , error) in
             //MARK: change to main queue
             DispatchQueue.main.async {
@@ -89,24 +89,6 @@ extension APIClient {
     
     
     
-    func mockRequest< T: Codable>(fileName : String, completion: (APIResponse<T, APIError>) -> Void) {
-        
-        
-        let resource = GenericResource(path: fileName, method: .GET, headers: nil, parameters: nil)
-        
-        if let url = Bundle.main.url(forResource: resource.path, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                // decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let value = try decoder.decode(T.self, from: data)
-                completion(.success(value))
-            } catch {
-                completion(APIResponse.failure(.RequestFailed))
-            }
-        }
-        return  completion(APIResponse.failure(.CouldNotDecodeJSON))
-        
-    }
+    
 }
 

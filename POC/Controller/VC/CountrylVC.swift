@@ -8,9 +8,10 @@
 
 import UIKit
 import Kingfisher
-class CountryDetailVC: UIViewController {
+class CountryVC: UIViewController {
     //MARK:VARIABLE DECELARATION
     private let viewModelCountry = CountryViewModel()
+    private var dataSource = CountryDataSource()
 
     let countryDescTable:UITableView = {
         let table = UITableView()
@@ -19,12 +20,15 @@ class CountryDetailVC: UIViewController {
         table.rowHeight = UITableView.automaticDimension
         table.layoutMargins = .zero
         table.separatorInset = .zero
+        table.separatorStyle = .singleLine;
         return table
     }()
     //MARK:LIFE CYCLE
      override func viewDidLoad() {
         super.viewDidLoad()
+
         customInit()
+        fetchCountryDetail()
         setUpHandler()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -33,23 +37,32 @@ class CountryDetailVC: UIViewController {
     }
 
     //MARK:PRIVATE METHOD(S)
-    func setUpHandler()  {
-        
+    
+    func fetchCountryDetail()
+    {
         let servicePath = JCPostServicePath.countryDetail()
         viewModelCountry.callWebServices(servicePath: servicePath)
+    }
+    func setUpHandler()  {
+        
+       
         viewModelCountry.successViewClosure = { [weak self] () in
             DispatchQueue.main.async {
-               
+                self?.dataSource.countryDtailModels = self?.viewModelCountry.countryInfo!.rows ?? [CountryDetailModel]()
                 self?.countryDescTable.reloadData()
-                //self?.navigationController?.popViewController(animated: false)
-                
-            }
+                self?.title = self?.viewModelCountry.countryInfo?.title
+                self?.viewModelCountry.countryInfo?.rows.count == 0 ? self?.countryDescTable.showEmptyScreen("No Data Found.") :self?.countryDescTable.showEmptyScreen("")
+                self?.countryDescTable.refreshControl?.endRefreshing()
+
+                }
         }
         
         viewModelCountry.showAlertClosure = { [weak self] (messgae) in
             DispatchQueue.main.async {
                 
-                self?.popupAlert(title:"Alert", message:"Invalid Credentail", actionTitles: ["Ok"], actions:[{action1 in
+                self?.countryDescTable.showEmptyScreen("No Data Found.")
+
+                self?.popupAlert(title:"Alert", message:"No Data Found.", actionTitles: ["Ok"], actions:[{action1 in
                     }, nil])
                 
             }
@@ -58,14 +71,14 @@ class CountryDetailVC: UIViewController {
     
     private func customInit()
     {
-    countryDescTable.dataSource = self
+    countryDescTable.dataSource = dataSource
     countryDescTable.delegate = self
     self.view.addSubview(countryDescTable)
     countryDescTable.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
     countryDescTable.reloadData()
-    countryDescTable.pullToRefresh(self) {
-            
-        }
+    countryDescTable.pullToRefresh(self) { [weak self] in
+        self?.fetchCountryDetail()
+      }
         
     }
     private func addConstraint()
@@ -95,13 +108,13 @@ class CountryDetailVC: UIViewController {
     
 
 }
-extension CountryDetailVC:UITableViewDelegate
+extension CountryVC:UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+       return UITableView.automaticDimension
     }
 }
-extension CountryDetailVC:UITableViewDataSource
+extension CountryVC:UITableViewDataSource
 {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

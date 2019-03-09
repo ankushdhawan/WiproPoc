@@ -35,7 +35,7 @@ class CountryTableViewCell: UITableViewCell {
     }()
     var countryImageView:ScaledHeightImageView = {
      var imageView = ScaledHeightImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
       //imageView.image = UIImage(named: "PlaceHolder")
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,8 +60,27 @@ class CountryTableViewCell: UITableViewCell {
         titleLable.text = model?.title
         descriptionLable.text = model?.description
         let url = URL(string: model?.imageHref ?? "")
+        countryImageView.kf.setImage(with: url) {[weak self] result in
+            switch result {
+            case .success(let value):
+                print(value.image)
+            case .failure( _):
+                self?.countryImageView.image = UIImage(named: "PlaceHolder")
+
+            }
+        }
+        
+        
+        
+        if (url == nil)
+        {
+            countryImageView.image = UIImage(named: "PlaceHolder")
+        }
+        else
+        {
         countryImageView.kf.indicatorType = .activity
         countryImageView.kf.setImage(with:url)
+        }
         
 
     }
@@ -99,7 +118,7 @@ class CountryTableViewCell: UITableViewCell {
         // SET TOP AND BOTTOM CONSTRAINT countryImageView
 
         let imageViewVerticalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-10-[countryImageView(20@250)]-10-|",
+            withVisualFormat: "V:|-10-[countryImageView(>=50)]-10-|",
             metrics: nil,
             views: views)
         allConstraints += imageViewVerticalConstraints

@@ -20,7 +20,7 @@
 		F229CE39223245BB00A28A75 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE33223245BB00A28A75 /* APIResponse.swift */; };
 		F229CE3A223245BB00A28A75 /* PostServicePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE34223245BB00A28A75 /* PostServicePath.swift */; };
 		F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0622316EAF00EBF655 /* AppDelegate.swift */; };
-		F2741B3F22316EB000EBF655 /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */; };
+		F2741B3F22316EB000EBF655 /* CountrylVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0B22316EAF00EBF655 /* CountrylVC.swift */; };
 		F2741B4622316EB000EBF655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2741B1522316EAF00EBF655 /* Assets.xcassets */; };
 		F2741B4722316EB000EBF655 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1822316EAF00EBF655 /* Constants.swift */; };
 		F2741B4822316EB000EBF655 /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1922316EAF00EBF655 /* Globel.swift */; };
@@ -29,17 +29,18 @@
 		F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B2D22316EB000EBF655 /* AlertViewControllerExtension.swift */; };
 		F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3222316EB000EBF655 /* ViewControllerExtension.swift */; };
 		F2741B5522316EB000EBF655 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3422316EB000EBF655 /* TextField+Extension.swift */; };
-		F2741B5622316EB000EBF655 /* ArrowRefreshAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3622316EB000EBF655 /* ArrowRefreshAnimator.swift */; };
-		F2741B5722316EB000EBF655 /* UIScrollView+Infinity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3722316EB000EBF655 /* UIScrollView+Infinity.swift */; };
-		F2741B5822316EB000EBF655 /* PullToRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3822316EB000EBF655 /* PullToRefresher.swift */; };
-		F2741B5922316EB000EBF655 /* InfiniteScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3922316EB000EBF655 /* InfiniteScroller.swift */; };
-		F2741B5A22316EB000EBF655 /* DefaultInfinityAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3A22316EB000EBF655 /* DefaultInfinityAnimator.swift */; };
 		F27559382232CE5800B9C522 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559372232CE5800B9C522 /* CountryModel.swift */; };
 		F275593A2232CFEE00B9C522 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559392232CFEE00B9C522 /* CountryViewModel.swift */; };
 		F275593C2232D78E00B9C522 /* CountryDetailApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */; };
+		F275593F2233B35E00B9C522 /* CountryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275593E2233B35E00B9C522 /* CountryDataSource.swift */; };
+		F27559412233B62E00B9C522 /* CountryDetailVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559402233B62E00B9C522 /* CountryDetailVCTests.swift */; };
+		F27559432233C50900B9C522 /* CountryDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559422233C50900B9C522 /* CountryDataSourceTests.swift */; };
+		F27559462233DB5A00B9C522 /* Country.json in Resources */ = {isa = PBXBuildFile; fileRef = F27559452233DB5900B9C522 /* Country.json */; };
+		F27559482233E34500B9C522 /* CountryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559472233E34500B9C522 /* CountryViewModelTest.swift */; };
 		F27F5D0622315F3500B01605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27F5D0422315F3500B01605 /* LaunchScreen.storyboard */; };
 		F27F5D1122315F3600B01605 /* POCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1022315F3600B01605 /* POCTests.swift */; };
 		F27F5D1C22315F3600B01605 /* POCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1B22315F3600B01605 /* POCUITests.swift */; };
+		F2C09732223430EB0025A52F /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09731223430EB0025A52F /* CountryDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +80,7 @@
 		F229CE34223245BB00A28A75 /* PostServicePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostServicePath.swift; sourceTree = "<group>"; };
 		F2741B0422316EAE00EBF655 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2741B0622316EAF00EBF655 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
+		F2741B0B22316EAF00EBF655 /* CountrylVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrylVC.swift; sourceTree = "<group>"; };
 		F2741B1522316EAF00EBF655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2741B1822316EAF00EBF655 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2741B1922316EAF00EBF655 /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
@@ -88,14 +89,14 @@
 		F2741B2D22316EB000EBF655 /* AlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerExtension.swift; sourceTree = "<group>"; };
 		F2741B3222316EB000EBF655 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		F2741B3422316EB000EBF655 /* TextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
-		F2741B3622316EB000EBF655 /* ArrowRefreshAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowRefreshAnimator.swift; sourceTree = "<group>"; };
-		F2741B3722316EB000EBF655 /* UIScrollView+Infinity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Infinity.swift"; sourceTree = "<group>"; };
-		F2741B3822316EB000EBF655 /* PullToRefresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresher.swift; sourceTree = "<group>"; };
-		F2741B3922316EB000EBF655 /* InfiniteScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScroller.swift; sourceTree = "<group>"; };
-		F2741B3A22316EB000EBF655 /* DefaultInfinityAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultInfinityAnimator.swift; sourceTree = "<group>"; };
 		F27559372232CE5800B9C522 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		F27559392232CFEE00B9C522 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailApiClient.swift; sourceTree = "<group>"; };
+		F275593E2233B35E00B9C522 /* CountryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataSource.swift; sourceTree = "<group>"; };
+		F27559402233B62E00B9C522 /* CountryDetailVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVCTests.swift; sourceTree = "<group>"; };
+		F27559422233C50900B9C522 /* CountryDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataSourceTests.swift; sourceTree = "<group>"; };
+		F27559452233DB5900B9C522 /* Country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Country.json; sourceTree = "<group>"; };
+		F27559472233E34500B9C522 /* CountryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModelTest.swift; sourceTree = "<group>"; };
 		F27F5CF822315F2F00B01605 /* POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F5D0522315F3500B01605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F27F5D0C22315F3600B01605 /* POCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +105,7 @@
 		F27F5D1722315F3600B01605 /* POCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F5D1B22315F3600B01605 /* POCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCUITests.swift; sourceTree = "<group>"; };
 		F27F5D1D22315F3600B01605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2C09731223430EB0025A52F /* CountryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
 		F4932C31DB3E923E4A0C35D6 /* Pods_POCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 		F2741B0922316EAF00EBF655 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F275593D2233B33F00B9C522 /* DataSource */,
 				F229CE2722317AE800A28A75 /* NavigationVC */,
 				F2741B0A22316EAF00EBF655 /* VC */,
 			);
@@ -210,7 +213,7 @@
 		F2741B0A22316EAF00EBF655 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				F2741B0B22316EAF00EBF655 /* CountryDetailVC.swift */,
+				F2741B0B22316EAF00EBF655 /* CountrylVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 		F2741B1322316EAF00EBF655 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F27559442233DB4600B9C522 /* MockJson */,
 				F2741B1422316EAF00EBF655 /* Images */,
 				F2741B1622316EAF00EBF655 /* Localize */,
 				F2741B1722316EAF00EBF655 /* Globel */,
@@ -292,7 +296,6 @@
 			children = (
 				F229CE2C223214A400A28A75 /* SubClass */,
 				F2741B2722316EB000EBF655 /* Extensions */,
-				F2741B3522316EB000EBF655 /* Refresher */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -340,16 +343,21 @@
 			path = UITextField;
 			sourceTree = "<group>";
 		};
-		F2741B3522316EB000EBF655 /* Refresher */ = {
+		F275593D2233B33F00B9C522 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				F2741B3622316EB000EBF655 /* ArrowRefreshAnimator.swift */,
-				F2741B3722316EB000EBF655 /* UIScrollView+Infinity.swift */,
-				F2741B3822316EB000EBF655 /* PullToRefresher.swift */,
-				F2741B3922316EB000EBF655 /* InfiniteScroller.swift */,
-				F2741B3A22316EB000EBF655 /* DefaultInfinityAnimator.swift */,
+				F275593E2233B35E00B9C522 /* CountryDataSource.swift */,
+				F2C09731223430EB0025A52F /* CountryDetailVC.swift */,
 			);
-			path = Refresher;
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		F27559442233DB4600B9C522 /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				F27559452233DB5900B9C522 /* Country.json */,
+			);
+			path = MockJson;
 			sourceTree = "<group>";
 		};
 		F27F5CEF22315F2E00B01605 = {
@@ -381,9 +389,9 @@
 				F2741B0922316EAF00EBF655 /* Controller */,
 				F2741B1C22316EAF00EBF655 /* ServiceClient */,
 				F2741B1F22316EB000EBF655 /* View Models */,
+				F2741B0722316EAF00EBF655 /* CustomView */,
 				F2741B1B22316EAF00EBF655 /* Model */,
 				F2741B0C22316EAF00EBF655 /* Network Layer */,
-				F2741B0722316EAF00EBF655 /* CustomView */,
 				F2741B2322316EB000EBF655 /* Helper */,
 				F2741B1322316EAF00EBF655 /* Resources */,
 				F27F5D0422315F3500B01605 /* LaunchScreen.storyboard */,
@@ -396,6 +404,9 @@
 			isa = PBXGroup;
 			children = (
 				F27F5D1022315F3600B01605 /* POCTests.swift */,
+				F27559402233B62E00B9C522 /* CountryDetailVCTests.swift */,
+				F27559422233C50900B9C522 /* CountryDataSourceTests.swift */,
+				F27559472233E34500B9C522 /* CountryViewModelTest.swift */,
 				F27F5D1222315F3600B01605 /* Info.plist */,
 			);
 			path = POCTests;
@@ -520,6 +531,7 @@
 			files = (
 				F27F5D0622315F3500B01605 /* LaunchScreen.storyboard in Resources */,
 				F2741B4622316EB000EBF655 /* Assets.xcassets in Resources */,
+				F27559462233DB5A00B9C522 /* Country.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,10 +649,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2741B5922316EB000EBF655 /* InfiniteScroller.swift in Sources */,
-				F2741B3F22316EB000EBF655 /* CountryDetailVC.swift in Sources */,
+				F2741B3F22316EB000EBF655 /* CountrylVC.swift in Sources */,
 				F27559382232CE5800B9C522 /* CountryModel.swift in Sources */,
-				F2741B5A22316EB000EBF655 /* DefaultInfinityAnimator.swift in Sources */,
 				F275593A2232CFEE00B9C522 /* CountryViewModel.swift in Sources */,
 				F229CE37223245BB00A28A75 /* MockServices.swift in Sources */,
 				F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */,
@@ -651,14 +661,13 @@
 				F229CE36223245BB00A28A75 /* APIClient.swift in Sources */,
 				F2741B5522316EB000EBF655 /* TextField+Extension.swift in Sources */,
 				F275593C2232D78E00B9C522 /* CountryDetailApiClient.swift in Sources */,
-				F2741B5722316EB000EBF655 /* UIScrollView+Infinity.swift in Sources */,
 				F2741B4922316EB000EBF655 /* ColorManager.swift in Sources */,
-				F2741B5622316EB000EBF655 /* ArrowRefreshAnimator.swift in Sources */,
-				F2741B5822316EB000EBF655 /* PullToRefresher.swift in Sources */,
 				F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */,
 				F229CE2922317BFC00A28A75 /* RootNavVC.swift in Sources */,
 				F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */,
 				F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */,
+				F275593F2233B35E00B9C522 /* CountryDataSource.swift in Sources */,
+				F2C09732223430EB0025A52F /* CountryDetailVC.swift in Sources */,
 				F2741B4722316EB000EBF655 /* Constants.swift in Sources */,
 				F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */,
 				F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */,
@@ -670,6 +679,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27559412233B62E00B9C522 /* CountryDetailVCTests.swift in Sources */,
+				F27559482233E34500B9C522 /* CountryViewModelTest.swift in Sources */,
+				F27559432233C50900B9C522 /* CountryDataSourceTests.swift in Sources */,
 				F27F5D1122315F3600B01605 /* POCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

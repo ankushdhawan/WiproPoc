@@ -8,25 +8,24 @@
 
 import Foundation
 
-class CountryDetailApiClient: APIClient {
+class CountryDetailApiClient  {
    
    
     
-    var session: URLSession
-    
-    init(configuration: URLSessionConfiguration) {
-        self.session = URLSession(configuration: configuration)
+    var client:APIClient
+    init(client: APIClient) {
+        self.client = client
     }
     
     convenience  init() {
-        self.init(configuration: .default)
+        self.init(client: APIService())
     }
     
     func fetchCountryData(resource : JCAPIResource,completion: @escaping (APIResponse<CountryModel, APIError>) -> Void) {
         
       
 
-        fetch(with: resource , decode: { json -> CountryModel? in
+        client.fetch(with: resource , decode: { json -> CountryModel? in
             guard let user = json as? CountryModel else { return  nil }
             return user
         }, completion: completion)

@@ -16,7 +16,7 @@ struct ColorManager {
     static  var CustomGreenColor: UIColor {
         return UIColor(displayP3Red: 157.0/255.0, green: 195.0/255.0, blue: 131.0/255.0, alpha: 1.0)
     }
-  static  var BackgroundBlueColor: UIColor {
+  static  var NavBarColor: UIColor {
         return UIColor(displayP3Red: 241.0/255.0, green: 247.0/255.0, blue: 253.0/255.0, alpha: 1.0)
     }
    static var BackgroundBlueColorLight: UIColor {

@@ -1,23 +1,23 @@
-//
-//  MockServices.swift
-//  Jenny Creig
-//
-//  Created by gourav sharma on 6/28/18.
-//  Copyright © 2018 SharpMedical. All rights reserved.
-//
 
 import Foundation
 
-struct MockService  {
+struct MockService:APIClient  {
+    func fetch<T>(with request: JCAPIResource, decode: @escaping (Codable) -> T?, completion: @escaping (APIResponse<T, APIError>) -> Void) where T : Decodable, T : Encodable {
+        self.request(fileName: request.path) { result in
+            completion(result)
+        }
+    }
     
-  static func request< T: Codable>(fileName : String, completion: (APIResponse<T, APIError>) -> Void) {
+    
+   func request< T: Codable>(fileName : String, completion: (APIResponse<T, APIError>) -> Void) {
         
         print("Loading Mock CarePlan Data")
         
         let resource = GenericResource(path: fileName, method: .GET, headers: nil, parameters: nil)
-        
-        if let url = Bundle.main.url(forResource: resource.path, withExtension: "json") {
+        if let url = Bundle.main.url(forResource: resource.path, withExtension:"json")
+        {
             do {
+
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let value = try decoder.decode(T.self, from: data)
@@ -26,7 +26,10 @@ struct MockService  {
                completion(APIResponse.failure(.RequestFailed))
             }
         }
+    else
+        {
         return  completion(APIResponse.failure(.CouldNotDecodeJSON))
+    }
         
     }
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+var completionHandler: (() -> Void)?
 
 extension UITableViewCell
 {
@@ -21,35 +22,23 @@ extension UITableViewCell
 
 extension UITableView {
     func pullToRefresh(_ vc: UIViewController, callBack: @escaping () -> Void) {
-        let animator = ArrowRefreshAnimator(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-        addPullToRefresh(64.0, animator: animator) {
-            callBack()
-        }
-    }
+        let refreshControl = UIRefreshControl()
+        self.refreshControl = refreshControl
+        completionHandler = callBack
+        refreshControl.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
 
-    func endPull2RefreshAndInfiniteScrolling() {
-//        if let count = count, count > 15 {
-//            enableInfiniteScroll = true
-//        } else {
-//            enableInfiniteScroll = false
-//        }
-        endRefreshing()
-        endInfiniteScrolling()
-        reloadData()
-    }
 
-    func infiniteScrolling(_ vc: UIViewController, callBack: @escaping () -> Void) {
-        let animator = DefaultInfiniteAnimator(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        addInfiniteScroll(30.0, animator: animator) {
-            callBack()
-        }
     }
-
-    func showEmptyScreen(_ message: String, errorIcon: UIImage = #imageLiteral(resourceName: "menuIcon")) {
+    @objc private func refreshWeatherData(_ sender: Any) {
+        // Fetch Weather Data
+        completionHandler!()
+    }
+    
+   func showEmptyScreen(_ message: String) {
         backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         let noDataLabel: UILabel = UILabel(frame: CGRect(x: 10, y: self.bounds.height / 2 - 50, width: self.bounds.size.width - 20, height: 100))
         noDataLabel.text = message
-        noDataLabel.textColor = #colorLiteral(red: 0.7302808762, green: 0.7317310572, blue: 0.7744688392, alpha: 1)
         noDataLabel.textAlignment = .center
         noDataLabel.numberOfLines = 0
         self.backgroundView?.addSubview(noDataLabel)

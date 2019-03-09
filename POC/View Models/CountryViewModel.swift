@@ -45,7 +45,13 @@ class CountryViewModel : GenericViewModel{
                 
                 
                 if let country = response.value {
-                    self.countryInfo = country
+                    var rows = country.rows.filter({ (model) -> Bool in
+                        let status = (model.description != nil || model.title != nil || model.imageHref != nil)
+                        return status
+
+                    })
+                   self.countryInfo = country
+                   self.countryInfo?.rows = rows
                     
                     
                 }
