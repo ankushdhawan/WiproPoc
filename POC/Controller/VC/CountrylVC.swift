@@ -44,9 +44,9 @@ class CountryVC: UIViewController {
         let servicePath = JCPostServicePath.countryDetail()
         viewModelCountry.callWebServices(servicePath: servicePath)
     }
+    // Handler handle all the callbacks from View Mddek
     func setUpHandler()  {
-        
-       
+        // Handle the success response from ViewModel
         viewModelCountry.successViewClosure = { [weak self] () in
             DispatchQueue.main.async {
                 hideLoader(parentView: (self?.view)!)
@@ -58,8 +58,8 @@ class CountryVC: UIViewController {
 
                 }
         }
-        
-        viewModelCountry.showAlertClosure = { [weak self] (messgae) in
+        // Handle the Alert Message from view model
+         viewModelCountry.showAlertClosure = { [weak self] (messgae) in
             DispatchQueue.main.async {
                 hideLoader(parentView: (self?.view)!)
 

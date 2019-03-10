@@ -17,11 +17,7 @@ class APIService:APIClient {
         let method = requestEnvelop.method.rawValue
         let type = HTTPMethod(rawValue: method)
         let header = HTTPHeaders(requestEnvelop.headers!)
-       
-        let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/fact")
-        
-
-        AF.request(url!, method:type!, parameters:requestEnvelop.parameters, encoding:requestEnvelop.encoding.getEncodingType(), headers: header).response { (response) in
+        AF.request(requestEnvelop.urlComponents.url!, method:type!, parameters:requestEnvelop.parameters, encoding:requestEnvelop.encoding.getEncodingType(), headers: header).response { (response) in
             
             switch(response.result) {
             case .success(_):

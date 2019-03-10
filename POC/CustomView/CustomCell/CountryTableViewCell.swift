@@ -57,9 +57,12 @@ class CountryTableViewCell: UITableViewCell {
         containerView.addSubview(countryImageView)
         containerView.addSubview(titleLable)
         containerView.addSubview(descriptionLable)
+        // SET MODEL CONTENT TO LABEL AND IMAGE
         titleLable.text = model?.title
         descriptionLable.text = model?.description
+        // CHECK IMAGE IS URL NOT LOADING IMAGE THEN SHOW PLACEHOILDER IMAGE
         let url = URL(string: model?.imageHref ?? "")
+        countryImageView.kf.indicatorType = .activity
         countryImageView.kf.setImage(with: url) {[weak self] result in
             switch result {
             case .success(let value):
@@ -69,20 +72,6 @@ class CountryTableViewCell: UITableViewCell {
 
             }
         }
-        
-        
-        
-        if (url == nil)
-        {
-            countryImageView.image = UIImage(named: "PlaceHolder")
-        }
-        else
-        {
-        countryImageView.kf.indicatorType = .activity
-        countryImageView.kf.setImage(with:url)
-        }
-        
-
     }
     //MARK:PRIVATE METHOD(S)
   private  func addConstraint()

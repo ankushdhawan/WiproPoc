@@ -9,9 +9,9 @@
 import UIKit
 
 class CountryDataSource: NSObject, UITableViewDataSource {
-    
-    var countryDtailModels = [CountryDetailModel]()
-    
+    //MARK:DECALRE OBJETS
+  var countryDtailModels = [CountryDetailModel]()
+    //MARK:DATA SOURCES METHOD(S)
     func numberOfSections(in tableView: UITableView) -> Int {
         return countryDtailModels.count > 0 ? 1 : 0
     }

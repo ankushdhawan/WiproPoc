@@ -10,9 +10,7 @@ struct MockService:APIClient  {
     
     
    func request< T: Codable>(fileName : String, completion: (APIResponse<T, APIError>) -> Void) {
-        
         print("Loading Mock CarePlan Data")
-        
         let resource = GenericResource(path: fileName, method: .GET, headers: nil, parameters: nil)
         if let url = Bundle.main.url(forResource: resource.path, withExtension:"json")
         {

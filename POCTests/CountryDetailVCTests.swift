@@ -23,6 +23,8 @@ class CountryVCTests: XCTestCase {
         let vc = CountryVC()
         controller = vc
         tableView = controller.countryDescTable
+        controller.loadViewIfNeeded()
+
         // Check the Table data source is CountryDataSource
         guard let ds = tableView.dataSource as? CountryDataSource else {
             return XCTFail("Controller's table view should have a country data source")

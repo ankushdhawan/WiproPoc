@@ -19,12 +19,11 @@ class RootNavVC: UINavigationController {
     //Mark:PRIVATE METHOD(S)
    private func customInit()
     {
-        self.title = "CountryDetail"
-        //self.navigationBar.barTintColor = ColorManager.NavBarColor
+        // Set Navigation Color
         UINavigationBar.appearance().backgroundColor = UIColor.blue
+        // Set root view controller in the navigation
         let rootVC = CountryVC()
         rootVC.view.backgroundColor = UIColor.red
-        
         self.viewControllers = [rootVC]
     }
 

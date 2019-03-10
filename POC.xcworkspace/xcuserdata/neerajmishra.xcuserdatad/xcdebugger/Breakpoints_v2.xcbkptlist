@@ -65,6 +65,83 @@
             endingLineNumber = "10"
             landmarkName = "unknown"
             landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "POC.CountryDetailVC.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; POC.CountryDetailVC"
+                  moduleName = "POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neerajmishra/Documents/DOCUMENT/Today%20Poc/WiproPoc/POC/Controller/VC/CountryDetailVC.swift"
+                  timestampString = "573896463.732548"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "POC.CountryDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; POC.CountryDetailVC"
+                  moduleName = "POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neerajmishra/Documents/DOCUMENT/Today%20Poc/WiproPoc/POC/Controller/VC/CountryDetailVC.swift"
+                  timestampString = "573896463.7363909"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "POC.CountryDetailVC.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;POC.CountryDetailVC&gt;"
+                  moduleName = "POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neerajmishra/Documents/DOCUMENT/Today%20Poc/WiproPoc/POC/Controller/VC/CountryDetailVC.swift"
+                  timestampString = "573896463.740386"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "POC.CountryDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;POC.CountryDetailVC&gt;"
+                  moduleName = "POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neerajmishra/Documents/DOCUMENT/Today%20Poc/WiproPoc/POC/Controller/VC/CountryDetailVC.swift"
+                  timestampString = "573896463.744524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "POC.CountryDetailVC.__deallocating_deinit"
+                  moduleName = "POC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neerajmishra/Documents/DOCUMENT/Today%20Poc/WiproPoc/POC/Controller/VC/CountryDetailVC.swift"
+                  timestampString = "573896463.7500041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +167,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "POC/Network Layer/APIClient.swift"
-            timestampString = "573848929.722718"
+            timestampString = "573898312.677156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "decodingTask(with:decodingType:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -105,13 +182,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "POCTests/CountryViewModelTest.swift"
-            timestampString = "573888827.214677"
+            filePath = "POC/Controller/VC/CountrylVC.swift"
+            timestampString = "573898312.68205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "testRecordContentFill()"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "customInit()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +198,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "POCTests/CountryViewModelTest.swift"
-            timestampString = "573888827.220458"
+            filePath = "POCTests/CountryDetailVCTests.swift"
+            timestampString = "573898312.682382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "testRecordContentFill()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setUp()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

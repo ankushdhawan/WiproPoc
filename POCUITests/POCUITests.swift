@@ -26,7 +26,7 @@ class POCUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+   // Test The Pull To refresh When app is load
     func testPullToRefreshTableViewResponse() {
         
         let tablesQuery = XCUIApplication().tables
