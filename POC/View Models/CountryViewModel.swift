@@ -37,15 +37,11 @@ class CountryViewModel : GenericViewModel{
     }
     
     func callWebServices(servicePath : JCPostServicePath) {
-        showLoader()
         let resource = GenericResource(path: servicePath.path.rawValue, method:.GET)
         client.fetchCountryData(resource: resource) { (response) in
-            hideLoader()
             if response.isSuccess {
-                
-                
                 if let country = response.value {
-                    var rows = country.rows.filter({ (model) -> Bool in
+                    let rows = country.rows.filter({ (model) -> Bool in
                         let status = (model.description != nil || model.title != nil || model.imageHref != nil)
                         return status
 
@@ -57,7 +53,6 @@ class CountryViewModel : GenericViewModel{
                 }
                 
             } else {
-                
                 self.alertMessage = response.error.debugDescription
             }
             

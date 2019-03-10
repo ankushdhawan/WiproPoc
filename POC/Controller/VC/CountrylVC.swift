@@ -40,6 +40,7 @@ class CountryVC: UIViewController {
     
     func fetchCountryDetail()
     {
+        showLoader(with: self.view)
         let servicePath = JCPostServicePath.countryDetail()
         viewModelCountry.callWebServices(servicePath: servicePath)
     }
@@ -48,6 +49,7 @@ class CountryVC: UIViewController {
        
         viewModelCountry.successViewClosure = { [weak self] () in
             DispatchQueue.main.async {
+                hideLoader(parentView: (self?.view)!)
                 self?.dataSource.countryDtailModels = self?.viewModelCountry.countryInfo!.rows ?? [CountryDetailModel]()
                 self?.countryDescTable.reloadData()
                 self?.title = self?.viewModelCountry.countryInfo?.title
@@ -59,7 +61,8 @@ class CountryVC: UIViewController {
         
         viewModelCountry.showAlertClosure = { [weak self] (messgae) in
             DispatchQueue.main.async {
-                
+                hideLoader(parentView: (self?.view)!)
+
                 self?.countryDescTable.showEmptyScreen("No Data Found.")
 
                 self?.popupAlert(title:"Alert", message:"No Data Found.", actionTitles: ["Ok"], actions:[{action1 in
@@ -76,7 +79,7 @@ class CountryVC: UIViewController {
     self.view.addSubview(countryDescTable)
     countryDescTable.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
     countryDescTable.reloadData()
-    countryDescTable.pullToRefresh(self) { [weak self] in
+    countryDescTable.pullToRefresh() { [weak self] in
         self?.fetchCountryDetail()
       }
         
@@ -114,22 +117,4 @@ extension CountryVC:UITableViewDelegate
        return UITableView.automaticDimension
     }
 }
-extension CountryVC:UITableViewDataSource
-{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModelCountry.countryInfo?.rows.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Indentifier.kCountryCell, for: indexPath) as! CountryTableViewCell
-        cell.selectionStyle = .none
-        cell.configureView(model:viewModelCountry.countryInfo?.rows[indexPath.row])
-        cell.awakeFromNib()
-        return cell
-    }
-    
-    
-    
-    
-}
+

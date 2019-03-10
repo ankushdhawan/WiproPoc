@@ -2,7 +2,7 @@
 //  TableView+Extension.swift
 //  Liscio
 //
-//  Created by Ajay Singh Mehra on 03/11/17.
+//  Created by Ankush on 03/11/17.
 //  Copyright © 2017 Ajay Singh Mehra. All rights reserved.
 //
 
@@ -21,7 +21,7 @@ extension UITableViewCell
 }
 
 extension UITableView {
-    func pullToRefresh(_ vc: UIViewController, callBack: @escaping () -> Void) {
+    func pullToRefresh( callBack: @escaping () -> Void) {
         let refreshControl = UIRefreshControl()
         self.refreshControl = refreshControl
         completionHandler = callBack

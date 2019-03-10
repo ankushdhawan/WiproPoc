@@ -16,23 +16,25 @@
 import Foundation
 import UIKit
 
-func showLoader(withMessage message: String = "", color: UIColor = .lightGray) -> Void {
-//    let activityContainer: UIView = UIView(frame: UIScreen.main.bounds)
-//    // activityContainer.backgroundColor = .primary
-//    let indictorSize = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 40)
-//    let activityIndicatorView = NVActivityIndicatorView(frame: indictorSize, type: NVActivityIndicatorType(rawValue: 29)!, color: color, padding: 0)
-//    activityContainer.tag = 601601
-//    activityIndicatorView.center = activityContainer.center
-//    activityIndicatorView.startAnimating()
-//    activityContainer.addSubview(activityIndicatorView)
-//    UIApplication.shared.keyWindow!.addSubview(activityContainer)
-//    UIApplication.shared.keyWindow!.bringSubview(toFront: activityContainer)
+func showLoader(with parentView:UIView,withMessage message: String = "Please wait...", color: UIColor = .lightGray) -> Void {
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+    let blurEffectView = UIVisualEffectView(effect: blurEffect)
+    blurEffectView.frame = parentView.bounds
+    blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+    activityIndicator.startAnimating()
+    blurEffectView.contentView.addSubview(activityIndicator)
+    activityIndicator.center = blurEffectView.contentView.center
+    parentView.addSubview(blurEffectView)
 }
+    
 
-func hideLoader() -> Void {
-//    for item in UIApplication.shared.keyWindow!.subviews
-//        where item.tag == 601601 {
-//            item.removeFromSuperview()
-//    }
+
+func hideLoader(parentView:UIView) -> Void {
+    parentView.subviews.compactMap {  $0 as? UIVisualEffectView }.forEach {
+        $0.removeFromSuperview()
+    }
+    
 }
 

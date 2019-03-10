@@ -6,8 +6,15 @@
 	<dict>
 		<key>POC.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
+		</dict>
+		<key>POC_Dev.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>POC_Production.xcscheme_^#shared#^_</key>
 		<dict>

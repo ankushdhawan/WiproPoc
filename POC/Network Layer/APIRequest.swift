@@ -1,10 +1,3 @@
-//
-//  NetworkService.swift
-//  Jenny Creig
-//
-//  Created by gourav sharma on 6/27/18.
-//  Copyright © 2018 SharpMedical. All rights reserved.
-//
 
 import Foundation
 import Alamofire

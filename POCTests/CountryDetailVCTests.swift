@@ -22,9 +22,8 @@ class CountryVCTests: XCTestCase {
         super.setUp()
         let vc = CountryVC()
         controller = vc
-        controller.loadViewIfNeeded()
         tableView = controller.countryDescTable
-        
+        // Check the Table data source is CountryDataSource
         guard let ds = tableView.dataSource as? CountryDataSource else {
             return XCTFail("Controller's table view should have a country data source")
         }
@@ -32,14 +31,14 @@ class CountryVCTests: XCTestCase {
         dataSource = ds
         delegate = tableView.delegate
     }
-    
+    //Check Table Has cells
     func testTableViewHasCells() {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Indentifier.kCountryCell)
         
         XCTAssertNotNil(cell,
                         "TableView should be able to dequeue cell with identifier: 'Cell'")
     }
-   
+    //Check Table view delegate is view controller
     func testTableViewDelegateIsViewController() {
         XCTAssertTrue(tableView.delegate === controller,
                       "Controller should be delegate for the table view")

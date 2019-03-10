@@ -1,7 +1,5 @@
 
 import Foundation
-
-
 struct JCNetworkEndPoints {
     
     static func getDevBaseURL()->String {

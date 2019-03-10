@@ -18,6 +18,7 @@ class CountryDetailViewModelTests: XCTestCase
     var mockAPIService: MockService!
     override func setUp() {
         super.setUp()
+        //Create View Model Object
        sut = CountryViewModel()
 
     

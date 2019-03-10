@@ -18,11 +18,11 @@ class CountryDataSourceTests: XCTestCase {
         super.setUp()
         
         dataSource = CountryDataSource()
-        
+        // Register cell
         tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
         tableView.estimatedRowHeight = 44
-        
-        for number in 0..<20 {
+        // Add Dummy data in In the model
+         for number in 0..<20 {
             let model = CountryDetailModel(title: "Tile:\(number)", description:"description:\(number)" , imageHref: "url:\(number)")
             dataSource.countryDtailModels.append(model)
         }
@@ -52,6 +52,7 @@ class CountryDataSourceTests: XCTestCase {
     }
     func testCellForCustomClass()
     {
+        //Check table view cell class
         let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         guard cell is CountryTableViewCell  else {
             return XCTFail("Controller's table view Cell should have a country tableView cell")
@@ -59,6 +60,7 @@ class CountryDataSourceTests: XCTestCase {
     }
     
     func testCellForRow() {
+        //Check data source providing right data to cell
         testCellForCustomClass()
         let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! CountryTableViewCell
         XCTAssertEqual(cell.titleLable.text, "Tile:0",

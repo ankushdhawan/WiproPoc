@@ -28,7 +28,6 @@
 		F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B2922316EB000EBF655 /* TableView+Extension.swift */; };
 		F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B2D22316EB000EBF655 /* AlertViewControllerExtension.swift */; };
 		F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3222316EB000EBF655 /* ViewControllerExtension.swift */; };
-		F2741B5522316EB000EBF655 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3422316EB000EBF655 /* TextField+Extension.swift */; };
 		F27559382232CE5800B9C522 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559372232CE5800B9C522 /* CountryModel.swift */; };
 		F275593A2232CFEE00B9C522 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559392232CFEE00B9C522 /* CountryViewModel.swift */; };
 		F275593C2232D78E00B9C522 /* CountryDetailApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */; };
@@ -40,7 +39,7 @@
 		F27F5D0622315F3500B01605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27F5D0422315F3500B01605 /* LaunchScreen.storyboard */; };
 		F27F5D1122315F3600B01605 /* POCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1022315F3600B01605 /* POCTests.swift */; };
 		F27F5D1C22315F3600B01605 /* POCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1B22315F3600B01605 /* POCUITests.swift */; };
-		F2C09732223430EB0025A52F /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09731223430EB0025A52F /* CountryDetailVC.swift */; };
+		F2C097342234C8E40025A52F /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C097332234C8E40025A52F /* CountryDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +87,6 @@
 		F2741B2922316EB000EBF655 /* TableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 		F2741B2D22316EB000EBF655 /* AlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerExtension.swift; sourceTree = "<group>"; };
 		F2741B3222316EB000EBF655 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		F2741B3422316EB000EBF655 /* TextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		F27559372232CE5800B9C522 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		F27559392232CFEE00B9C522 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		F275593B2232D78E00B9C522 /* CountryDetailApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailApiClient.swift; sourceTree = "<group>"; };
@@ -105,7 +103,7 @@
 		F27F5D1722315F3600B01605 /* POCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F5D1B22315F3600B01605 /* POCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCUITests.swift; sourceTree = "<group>"; };
 		F27F5D1D22315F3600B01605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2C09731223430EB0025A52F /* CountryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
+		F2C097332234C8E40025A52F /* CountryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
 		F4932C31DB3E923E4A0C35D6 /* Pods_POCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -214,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F2741B0B22316EAF00EBF655 /* CountrylVC.swift */,
+				F2C097332234C8E40025A52F /* CountryDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -306,7 +305,6 @@
 				F2741B2822316EB000EBF655 /* TableView */,
 				F2741B2C22316EB000EBF655 /* AlertViewController */,
 				F2741B3122316EB000EBF655 /* ViewController */,
-				F2741B3322316EB000EBF655 /* UITextField */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,19 +333,10 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		F2741B3322316EB000EBF655 /* UITextField */ = {
-			isa = PBXGroup;
-			children = (
-				F2741B3422316EB000EBF655 /* TextField+Extension.swift */,
-			);
-			path = UITextField;
-			sourceTree = "<group>";
-		};
 		F275593D2233B33F00B9C522 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				F275593E2233B35E00B9C522 /* CountryDataSource.swift */,
-				F2C09731223430EB0025A52F /* CountryDetailVC.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -659,7 +648,6 @@
 				F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */,
 				F2741B4822316EB000EBF655 /* Globel.swift in Sources */,
 				F229CE36223245BB00A28A75 /* APIClient.swift in Sources */,
-				F2741B5522316EB000EBF655 /* TextField+Extension.swift in Sources */,
 				F275593C2232D78E00B9C522 /* CountryDetailApiClient.swift in Sources */,
 				F2741B4922316EB000EBF655 /* ColorManager.swift in Sources */,
 				F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */,
@@ -667,7 +655,7 @@
 				F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */,
 				F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */,
 				F275593F2233B35E00B9C522 /* CountryDataSource.swift in Sources */,
-				F2C09732223430EB0025A52F /* CountryDetailVC.swift in Sources */,
+				F2C097342234C8E40025A52F /* CountryDetailVC.swift in Sources */,
 				F2741B4722316EB000EBF655 /* Constants.swift in Sources */,
 				F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */,
 				F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */,
