@@ -12,7 +12,7 @@
 		8D41B93CFE011A5BA19CDFB4 /* Pods_POCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C9F4CB8B71248551CA9840 /* Pods_POCTests.framework */; };
 		F2227E252234F37300F6BDAD /* POCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1B22315F3600B01605 /* POCUITests.swift */; };
 		F229CE2922317BFC00A28A75 /* RootNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2822317BFC00A28A75 /* RootNavVC.swift */; };
-		F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */; };
+		F229CE2B223187A600A28A75 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2A223187A600A28A75 /* CountryCell.swift */; };
 		F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */; };
 		F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE2F223245BA00A28A75 /* APIRequest.swift */; };
 		F229CE36223245BB00A28A75 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE30223245BB00A28A75 /* APIClient.swift */; };
@@ -20,6 +20,7 @@
 		F229CE38223245BB00A28A75 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE32223245BB00A28A75 /* APIEndPoint.swift */; };
 		F229CE39223245BB00A28A75 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE33223245BB00A28A75 /* APIResponse.swift */; };
 		F229CE3A223245BB00A28A75 /* PostServicePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229CE34223245BB00A28A75 /* PostServicePath.swift */; };
+		F26C667122352A17004A8391 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C667022352A17004A8391 /* CustomFlowLayout.swift */; };
 		F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0622316EAF00EBF655 /* AppDelegate.swift */; };
 		F2741B3F22316EB000EBF655 /* CountrylVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B0B22316EAF00EBF655 /* CountrylVC.swift */; };
 		F2741B4622316EB000EBF655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2741B1522316EAF00EBF655 /* Assets.xcassets */; };
@@ -35,7 +36,6 @@
 		F275593F2233B35E00B9C522 /* CountryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275593E2233B35E00B9C522 /* CountryDataSource.swift */; };
 		F27559462233DB5A00B9C522 /* Country.json in Resources */ = {isa = PBXBuildFile; fileRef = F27559452233DB5900B9C522 /* Country.json */; };
 		F27F5D0622315F3500B01605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27F5D0422315F3500B01605 /* LaunchScreen.storyboard */; };
-		F2C097342234C8E40025A52F /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C097332234C8E40025A52F /* CountryDetailVC.swift */; };
 		F2C097412234E9E60025A52F /* POCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F5D1022315F3600B01605 /* POCTests.swift */; };
 		F2C097432234EA2F0025A52F /* CountryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559472233E34500B9C522 /* CountryViewModelTest.swift */; };
 		F2C097452234EA3E0025A52F /* CountryDetailVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559402233B62E00B9C522 /* CountryDetailVCTests.swift */; };
@@ -70,7 +70,7 @@
 		DCBA8827B5FFC12CD352B125 /* Pods-POCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POCUITests.release.xcconfig"; path = "Target Support Files/Pods-POCUITests/Pods-POCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F18D43C7D622F83BE2FD456E /* Pods-POCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POCTests.debug.xcconfig"; path = "Target Support Files/Pods-POCTests/Pods-POCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F229CE2822317BFC00A28A75 /* RootNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavVC.swift; sourceTree = "<group>"; };
-		F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		F229CE2A223187A600A28A75 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		F229CE2D223214D300A28A75 /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
 		F229CE2F223245BA00A28A75 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F229CE30223245BB00A28A75 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -78,6 +78,7 @@
 		F229CE32223245BB00A28A75 /* APIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
 		F229CE33223245BB00A28A75 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		F229CE34223245BB00A28A75 /* PostServicePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostServicePath.swift; sourceTree = "<group>"; };
+		F26C667022352A17004A8391 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		F2741B0422316EAE00EBF655 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2741B0622316EAF00EBF655 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2741B0B22316EAF00EBF655 /* CountrylVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrylVC.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		F27F5D1722315F3600B01605 /* POCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F5D1B22315F3600B01605 /* POCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCUITests.swift; sourceTree = "<group>"; };
 		F27F5D1D22315F3600B01605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2C097332234C8E40025A52F /* CountryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
 		F2C097352234DD180025A52F /* CountryModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelTests.swift; sourceTree = "<group>"; };
 		F2C0973E2234E3DD0025A52F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F4932C31DB3E923E4A0C35D6 /* Pods_POCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +178,14 @@
 			path = SubClass;
 			sourceTree = "<group>";
 		};
+		F26C666F223529F9004A8391 /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F26C667022352A17004A8391 /* CustomFlowLayout.swift */,
+			);
+			path = CustomLayout;
+			sourceTree = "<group>";
+		};
 		F2741B0522316EAF00EBF655 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +205,7 @@
 		F2741B0822316EAF00EBF655 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				F229CE2A223187A600A28A75 /* CountryTableViewCell.swift */,
+				F229CE2A223187A600A28A75 /* CountryCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -216,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				F2741B0B22316EAF00EBF655 /* CountrylVC.swift */,
-				F2C097332234C8E40025A52F /* CountryDetailVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 		F2741B1322316EAF00EBF655 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F26C666F223529F9004A8391 /* CustomLayout */,
 				F27559442233DB4600B9C522 /* MockJson */,
 				F2741B1422316EAF00EBF655 /* Images */,
 				F2741B1622316EAF00EBF655 /* Localize */,
@@ -648,6 +656,7 @@
 				F275593A2232CFEE00B9C522 /* CountryViewModel.swift in Sources */,
 				F229CE37223245BB00A28A75 /* MockServices.swift in Sources */,
 				F229CE2E223214D300A28A75 /* ScaledHeightImageView.swift in Sources */,
+				F26C667122352A17004A8391 /* CustomFlowLayout.swift in Sources */,
 				F229CE39223245BB00A28A75 /* APIResponse.swift in Sources */,
 				F229CE3A223245BB00A28A75 /* PostServicePath.swift in Sources */,
 				F2741B3E22316EB000EBF655 /* AppDelegate.swift in Sources */,
@@ -657,10 +666,9 @@
 				F2741B4922316EB000EBF655 /* ColorManager.swift in Sources */,
 				F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */,
 				F229CE2922317BFC00A28A75 /* RootNavVC.swift in Sources */,
-				F229CE2B223187A600A28A75 /* CountryTableViewCell.swift in Sources */,
+				F229CE2B223187A600A28A75 /* CountryCell.swift in Sources */,
 				F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */,
 				F275593F2233B35E00B9C522 /* CountryDataSource.swift in Sources */,
-				F2C097342234C8E40025A52F /* CountryDetailVC.swift in Sources */,
 				F2741B4722316EB000EBF655 /* Constants.swift in Sources */,
 				F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */,
 				F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */,

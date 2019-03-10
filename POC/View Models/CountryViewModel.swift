@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 protocol GenericViewModel {
     
     //Handler
@@ -35,6 +35,8 @@ class CountryViewModel : GenericViewModel{
             self.showAlertClosure!(alertMessage)
         }
     }
+    
+    
     
     func callWebServices(servicePath : JCPostServicePath) {
         let resource = GenericResource(path: servicePath.path.rawValue, method:.GET)

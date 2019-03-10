@@ -8,23 +8,26 @@
 
 import UIKit
 
-class CountryDataSource: NSObject, UITableViewDataSource {
-    //MARK:DECALRE OBJETS
-  var countryDtailModels = [CountryDetailModel]()
-    //MARK:DATA SOURCES METHOD(S)
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return countryDtailModels.count > 0 ? 1 : 0
+
+
+class CountryDataSource: NSObject, UICollectionViewDataSource{
+    var countryDtailModels = [CountryDetailModel]()
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countryDtailModels.count 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return countryDtailModels.count
+
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Indentifier.kCountryCell, for: indexPath) as! CountryTableViewCell
-        cell.selectionStyle = .none
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Indentifier.kCountryCell, for: indexPath) as! CountryCell
         cell.configureView(model:countryDtailModels[indexPath.row])
         cell.awakeFromNib()
         return cell
     }
+    
+    
 }

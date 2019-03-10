@@ -25,7 +25,7 @@ class CountryModelTests: XCTestCase {
     }
     
     func testCountryRowsIsNotNilByDefault() {
-        XCTAssertNil(model.rows,
+        XCTAssertNotNil(model.rows,
                        "model rows not be nil")
     }
     

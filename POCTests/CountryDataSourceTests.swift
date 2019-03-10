@@ -12,15 +12,25 @@ import XCTest
 
 class CountryDataSourceTests: XCTestCase {
     var dataSource: CountryDataSource!
-    let tableView = UITableView()
+    let flowLayout = UICustomCollectionViewLayout()
+
+    let collectionView:UICollectionView = {
+        let flowLayout = UICustomCollectionViewLayout()
+        flowLayout.numberOfColumns = 3
+        let collectionView = UICollectionView(frame:CGRect(x: 0, y: 0, width: 300, height: 300), collectionViewLayout: flowLayout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = UIColor.white
+        return collectionView
+    }()
     
     override func setUp() {
         super.setUp()
         
         dataSource = CountryDataSource()
         // Register cell
-        tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
-        tableView.estimatedRowHeight = 44
+        flowLayout.numberOfColumns = Constants.isIpad ? 3 : 1
+        collectionView.collectionViewLayout = flowLayout
+        collectionView.register(CountryCell.self, forCellWithReuseIdentifier: Constants.Indentifier.kCountryCell)
         // Add Dummy data in In the model
          for number in 0..<20 {
             let model = CountryDetailModel(title: "Tile:\(number)", description:"description:\(number)" , imageHref: "url:\(number)")
@@ -33,28 +43,23 @@ class CountryDataSourceTests: XCTestCase {
                        "DataSource should have correct number of CountryModelArray")
     }
     
-    func testHasZeroSectionsWhenZeroCountry() {
-        dataSource.countryDtailModels = []
-        
-        XCTAssertEqual(dataSource.numberOfSections(in: tableView), 0,
-                       "TableView should have zero sections when no CountryModelArray are present")
-    }
+    
     
     func testHasOneSectionWhenCountryArePresent() {
-        XCTAssertEqual(dataSource.numberOfSections(in: tableView), 1,
+        XCTAssertEqual(dataSource.numberOfSections(in: collectionView), 1,
                        "TableView should have one section when CountryModelArray are present")
     }
     
     func testNumberOfRows() {
-        let numberOfRows = dataSource.tableView(tableView, numberOfRowsInSection: 0)
+        let numberOfRows = dataSource.collectionView(collectionView, numberOfItemsInSection: 20)
         XCTAssertEqual(numberOfRows, 20,
                        "Number of rows in table should match number of CountryModelArray")
     }
     func testCellForCustomClass()
     {
         //Check table view cell class
-        let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        guard cell is CountryTableViewCell  else {
+        let cell = dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row:0, section:0))
+        guard cell is CountryCell  else {
             return XCTFail("Controller's table view Cell should have a country tableView cell")
         }
     }
@@ -62,7 +67,7 @@ class CountryDataSourceTests: XCTestCase {
     func testCellForRow() {
         //Check data source providing right data to cell
         testCellForCustomClass()
-        let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! CountryTableViewCell
+        let cell = dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row:0, section:0))as! CountryCell
         XCTAssertEqual(cell.titleLable.text, "Tile:0",
                        "The first cell should display name of first kitten")
     }

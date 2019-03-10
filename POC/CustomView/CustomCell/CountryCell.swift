@@ -8,7 +8,7 @@
 
 import UIKit
 import Kingfisher
-class CountryTableViewCell: UITableViewCell {
+class CountryCell: UICollectionViewCell {
     //MARK:DECELARTION OF OBJECTS
     var containerView:UIView = {
         var view = UIView()
@@ -99,7 +99,7 @@ class CountryTableViewCell: UITableViewCell {
         // SET LEADIING AND TRIALING CONSTRAINT countryImageView and titleLable
 
         let imageViewHorizontalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[countryImageView(100)]-5-[titleLable]-5-|",
+            withVisualFormat: "H:|-10-[countryImageView(70)]-5-[titleLable]-5-|",
             metrics: nil,
             views: views)
         allConstraints += imageViewHorizontalConstraints
@@ -107,7 +107,7 @@ class CountryTableViewCell: UITableViewCell {
         // SET TOP AND BOTTOM CONSTRAINT countryImageView
 
         let imageViewVerticalConstraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-10-[countryImageView(>=50)]-10-|",
+            withVisualFormat: "V:|-10-[countryImageView(70)]",
             metrics: nil,
             views: views)
         allConstraints += imageViewVerticalConstraints
@@ -136,11 +136,11 @@ class CountryTableViewCell: UITableViewCell {
     }
 
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
 }
 
