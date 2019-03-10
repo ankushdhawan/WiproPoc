@@ -27,7 +27,10 @@ class CountryVCTests: XCTestCase {
 
         // Check the Table data source is CountryDataSource
         guard let ds = collectionView.dataSource as? CountryDataSource else {
-            return XCTFail("Controller's table view should have a country data source")
+            return XCTFail("Controller's collectionview view should have a country data source")
+        }
+        guard let layout = collectionView.collectionViewLayout as? UICustomCollectionViewLayout else {
+            return XCTFail("Controller's collectionview should have a UICustomCollectionViewLayout")
         }
         
         dataSource = ds
@@ -38,12 +41,12 @@ class CountryVCTests: XCTestCase {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Indentifier.kCountryCell, for: IndexPath(row: 0, section: 0))
         
         XCTAssertNotNil(cell,
-                        "TableView should be able to dequeue cell with identifier: 'Cell'")
+                        "collectionview should be able to dequeue cell with identifier: 'Cell'")
     }
     //Check Table view delegate is view controller
     func testTableViewDelegateIsViewController() {
         XCTAssertTrue(collectionView.delegate === controller,
-                      "Controller should be delegate for the table view")
+                      "Controller should be delegate for the collectionview")
     }
 }
 

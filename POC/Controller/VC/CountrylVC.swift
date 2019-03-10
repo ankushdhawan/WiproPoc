@@ -52,7 +52,7 @@ class CountryVC: UIViewController {
                 self?.dataSource.countryDtailModels = self?.viewModelCountry.countryInfo!.rows ?? [CountryDetailModel]()
                 self?.countryDescCollectionView.reloadData()
                 self?.title = self?.viewModelCountry.countryInfo?.title
-                //                self?.viewModelCountry.countryInfo?.rows.count == 0 ? self?.countryDescCollectionView.showEmptyScreen("No Data Found.") :self?.countryDescCollectionView.showEmptyScreen("")
+                self?.viewModelCountry.countryInfo?.rows.count == 0 ? self?.countryDescCollectionView.showEmptyScreen("No Data Found.") :self?.countryDescCollectionView.showEmptyScreen("")
                 self?.countryDescCollectionView.refreshControl?.endRefreshing()
                 
             }
@@ -62,8 +62,7 @@ class CountryVC: UIViewController {
             DispatchQueue.main.async {
                 hideLoader(parentView: (self?.view)!)
                 
-                //self?.countryDescTable.showEmptyScreen("No Data Found.")
-                
+                self?.countryDescCollectionView.showEmptyScreen("No Data Found.")
                 self?.popupAlert(title:"Alert", message:"No Data Found.", actionTitles: ["Ok"], actions:[{action1 in
                     }, nil])
                 
@@ -73,20 +72,21 @@ class CountryVC: UIViewController {
     
     private func customInit()
     {
-        
+        //IPAD CASE SHOW 3 COLOUM AND IPHONE CASE SHOW 1 COLOUM
         flowLayout.numberOfColumns = Constants.isIpad ? 3 : 1
         flowLayout.delegate = self
         countryDescCollectionView.collectionViewLayout = flowLayout
         countryDescCollectionView.dataSource = dataSource
         countryDescCollectionView.delegate = self
         self.view.addSubview(countryDescCollectionView)
-        //        countryDescCollectionView.register(CountryTableViewCell.self, forCellReuseIdentifier: Constants.Indentifier.kCountryCell)
+        //REGISTER CELL
         countryDescCollectionView.register(CountryCell.self, forCellWithReuseIdentifier: Constants.Indentifier.kCountryCell)
         
         countryDescCollectionView.reloadData()
-        //        countryDescCollectionView.pullToRefresh() { [weak self] in
-        //            self?.fetchCountryDetail()
-        //        }
+        //PULL TO REFRESH CALL BACK
+        countryDescCollectionView.pullToRefresh() { [weak self] in
+                    self?.fetchCountryDetail()
+                }
         
     }
     private func addConstraint()

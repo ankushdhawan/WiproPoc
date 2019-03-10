@@ -47,7 +47,7 @@ class CountryDataSourceTests: XCTestCase {
     
     func testHasOneSectionWhenCountryArePresent() {
         XCTAssertEqual(dataSource.numberOfSections(in: collectionView), 1,
-                       "TableView should have one section when CountryModelArray are present")
+                       "collectionview should have one section when CountryModelArray are present")
     }
     
     func testNumberOfRows() {
@@ -60,7 +60,7 @@ class CountryDataSourceTests: XCTestCase {
         //Check table view cell class
         let cell = dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row:0, section:0))
         guard cell is CountryCell  else {
-            return XCTFail("Controller's table view Cell should have a country tableView cell")
+            return XCTFail("Controller's  collectionview cell should have a country tableView cell")
         }
     }
     
@@ -69,7 +69,7 @@ class CountryDataSourceTests: XCTestCase {
         testCellForCustomClass()
         let cell = dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row:0, section:0))as! CountryCell
         XCTAssertEqual(cell.titleLable.text, "Tile:0",
-                       "The first cell should display name of first kitten")
+                       "The first cell should display name of first Country")
     }
    
     

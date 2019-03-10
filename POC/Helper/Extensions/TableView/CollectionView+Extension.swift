@@ -10,17 +10,9 @@ import Foundation
 import UIKit
 var completionHandler: (() -> Void)?
 
-extension UITableViewCell
-{
-    func removeEmptyRow()
-    {
-        self.preservesSuperviewLayoutMargins = false
-        self.separatorInset = UIEdgeInsets.zero
-        self.layoutMargins = UIEdgeInsets.zero
-    }
-}
 
-extension UITableView {
+
+extension UICollectionView {
     func pullToRefresh( callBack: @escaping () -> Void) {
         let refreshControl = UIRefreshControl()
         self.refreshControl = refreshControl
@@ -42,7 +34,6 @@ extension UITableView {
         noDataLabel.textAlignment = .center
         noDataLabel.numberOfLines = 0
         self.backgroundView?.addSubview(noDataLabel)
-        self.separatorStyle = .none
     }
 }
 

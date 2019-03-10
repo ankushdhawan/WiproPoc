@@ -27,7 +27,7 @@
 		F2741B4722316EB000EBF655 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1822316EAF00EBF655 /* Constants.swift */; };
 		F2741B4822316EB000EBF655 /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1922316EAF00EBF655 /* Globel.swift */; };
 		F2741B4922316EB000EBF655 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B1A22316EAF00EBF655 /* ColorManager.swift */; };
-		F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B2922316EB000EBF655 /* TableView+Extension.swift */; };
+		F2741B4F22316EB000EBF655 /* CollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B2922316EB000EBF655 /* CollectionView+Extension.swift */; };
 		F2741B5122316EB000EBF655 /* AlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B2D22316EB000EBF655 /* AlertViewControllerExtension.swift */; };
 		F2741B5422316EB000EBF655 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2741B3222316EB000EBF655 /* ViewControllerExtension.swift */; };
 		F27559382232CE5800B9C522 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27559372232CE5800B9C522 /* CountryModel.swift */; };
@@ -86,7 +86,7 @@
 		F2741B1822316EAF00EBF655 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2741B1922316EAF00EBF655 /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F2741B1A22316EAF00EBF655 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		F2741B2922316EB000EBF655 /* TableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		F2741B2922316EB000EBF655 /* CollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extension.swift"; sourceTree = "<group>"; };
 		F2741B2D22316EB000EBF655 /* AlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerExtension.swift; sourceTree = "<group>"; };
 		F2741B3222316EB000EBF655 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		F27559372232CE5800B9C522 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 		F2741B2822316EB000EBF655 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				F2741B2922316EB000EBF655 /* TableView+Extension.swift */,
+				F2741B2922316EB000EBF655 /* CollectionView+Extension.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -671,7 +671,7 @@
 				F275593F2233B35E00B9C522 /* CountryDataSource.swift in Sources */,
 				F2741B4722316EB000EBF655 /* Constants.swift in Sources */,
 				F229CE35223245BB00A28A75 /* APIRequest.swift in Sources */,
-				F2741B4F22316EB000EBF655 /* TableView+Extension.swift in Sources */,
+				F2741B4F22316EB000EBF655 /* CollectionView+Extension.swift in Sources */,
 				F229CE38223245BB00A28A75 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
