@@ -16,8 +16,9 @@ class CountryVC: UIViewController {
     
     let countryDescCollectionView:UICollectionView = {
         let flowLayout = UICustomCollectionViewLayout()
-        flowLayout.numberOfColumns = 3
+        flowLayout.numberOfColumns = 1
         let collectionView = UICollectionView(frame:CGRect(x: 0, y: 0, width: 300, height: 300), collectionViewLayout: flowLayout)
+        collectionView.bounces = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = UIColor.white
         return collectionView
@@ -31,12 +32,41 @@ class CountryVC: UIViewController {
         setUpHandler()
         // Do any additional setup after loading the view, typically from a nib.
     }
+   
+    
     override func viewWillLayoutSubviews() {
+
         addConstraint()
     }
+    //MARK:DEVICE ORIENATATION Method(S)
+    
+   
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        Constants.isIpad ? self.setLayoutForIpad() : ()
+        
+    }
+    
+    
+   
+    
     
     //MARK:PRIVATE METHOD(S)
-    
+    func setLayoutForIpad()
+    {
+     //SHOW UI FOR IPAD OF COLLECTIONVIEW
+        if UIDevice.current.orientation.isLandscape {
+                print("landscape")
+                flowLayout.numberOfColumns = 4
+            } else {
+                print("portrait")
+                flowLayout.numberOfColumns = 3
+                
+            }
+            flowLayout.reloadLayout()
+            countryDescCollectionView.reloadData()
+        
+    }
+   
     func fetchCountryDetail()
     {
         showLoader(with: self.view)
@@ -118,7 +148,7 @@ class CountryVC: UIViewController {
     func getGridHeight(model:CountryDetailModel)->CGSize
     {
         let text = model.description ?? ""
-        let width = Constants.isIpad ? (Constants.kScreenWidth/3 - 40) : Constants.kScreenWidth
+        let width = Constants.isIpad ? (Constants.kScreenWidth/CGFloat(flowLayout.numberOfColumns) - 40) : Constants.kScreenWidth
         return  CGSize(width: width, height: heightForView(text: text, width: width))
         
     }
@@ -131,7 +161,7 @@ class CountryVC: UIViewController {
         label.font = font
         label.text = text
         label.sizeToFit()
-        let height = (label.frame.height < 30) ? 70.0 : label.frame.height + 40
+        let height = (label.frame.height < 30) ? 70.0 : label.frame.height + 50
         return height
     }
     

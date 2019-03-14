@@ -1,17 +1,10 @@
-//
-//  CountryTableViewCell.swift
-//  POC
-//
-//  Created by Neeraj Mishra on 3/7/19.
-//  Copyright © 2019 Reliance. All rights reserved.
-//
-
 import UIKit
 import Kingfisher
 class CountryCell: UICollectionViewCell {
     //MARK:DECELARTION OF OBJECTS
     var containerView:UIView = {
         var view = UIView()
+        view.clipsToBounds = true
         //view.backgroundColor = UIColor.lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -21,6 +14,7 @@ class CountryCell: UICollectionViewCell {
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textAlignment = .left
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -30,7 +24,9 @@ class CountryCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 17)
         label.textAlignment = .left
         label.numberOfLines = 0
+        //label.backgroundColor = UIColor.cyan
         label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
     var countryImageView:ScaledHeightImageView = {
@@ -41,8 +37,14 @@ class CountryCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    //MARK:LIFE CYCLE
+  
+    override func layoutSubviews() {
+        DispatchQueue.main.async {  [weak self] in
+           // REMOVE TOP SPACE FROM DESCRIPTION LABEL USE SIZE TO FIT
+            self?.descriptionLable.sizeToFit()
 
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -50,6 +52,7 @@ class CountryCell: UICollectionViewCell {
 
         // Initialization code
     }
+   
     //MARK:PUBLIC METHOD(S)
     public func configureView(model:CountryDetailModel?)
     {
@@ -130,7 +133,7 @@ class CountryCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate(allConstraints)
         
-        
+
         
         
     }
