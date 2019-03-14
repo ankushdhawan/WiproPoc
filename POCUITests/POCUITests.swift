@@ -1,13 +1,5 @@
-//
-//  POCUITests.swift
-//  POCUITests
-//
-//  Created by Neeraj Mishra on 3/7/19.
-//  Copyright © 2019 Reliance. All rights reserved.
-//
 
 import XCTest
-
 class POCUITests: XCTestCase {
 
     override func setUp() {

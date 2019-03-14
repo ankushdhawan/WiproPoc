@@ -1,11 +1,6 @@
 
 import Foundation
-
-
 import UIKit
-
-
-
 struct Constants {
 
     struct Indentifier
@@ -18,8 +13,13 @@ struct Constants {
     return UIDevice.current.userInterfaceIdiom == .pad
     
     }
-static let kScreenWidth = UIScreen.main.bounds.width
-static let kScreenHeight = UIScreen.main.bounds.width
+    static var kScreenWidth:CGFloat
+{
+        get{
+            return  UIScreen.main.bounds.width
+        }
+    }
+static var kScreenHeight = UIScreen.main.bounds.height
 static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
 }

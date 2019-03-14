@@ -1,18 +1,4 @@
-//
-//  Globel.swift
-//  GONFC
-//
-//  Created by Ankush Dhawan on 07/08/18.
-//  Copyright © 2018 Ankush Dhawan. All rights reserved.
-//
-//if  temprature > 80
-//{
-//    if temprature >= 350
-//    {
-//        break
-//    }
-//    continue
-//}
+
 import Foundation
 import UIKit
 
