@@ -31,13 +31,13 @@ public class UICustomCollectionViewLayout: UICollectionViewLayout {
     }
     
     override public var collectionViewContentSize: CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: contentHeight)
+        return CGSize(width: Constants.kScreenWidth, height: contentHeight)
     }
     
     override public func prepare() {
         if cache.isEmpty {
             collectionView?.contentInset = UIEdgeInsets(top: 0, left: cellPadding, bottom: cellPadding, right: cellPadding)
-            let columnWidth = UIScreen.main.bounds.width / CGFloat(numberOfColumns)
+            let columnWidth = Constants.kScreenWidth / CGFloat(numberOfColumns)
             var xOffset = [CGFloat]()
             for column in 0 ..< numberOfColumns {
                 xOffset.append(CGFloat(column) * columnWidth )
@@ -46,7 +46,7 @@ public class UICustomCollectionViewLayout: UICollectionViewLayout {
             if self.showHeader {
                 headerHeight = 88
                 let a = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, with: IndexPath(item: 1, section: 0))
-                a.frame = CGRect(x: cellPadding, y: contentHeight + cellPadding, width: UIScreen.main.bounds.width - (cellPadding*2), height: 185)
+                a.frame = CGRect(x: cellPadding, y: contentHeight + cellPadding, width: Constants.kScreenWidth - (cellPadding*2), height: 185)
                 contentHeight = max(contentHeight, a.frame.maxY + cellPadding)
                 cache.append(a)
             } else {
@@ -78,7 +78,7 @@ public class UICustomCollectionViewLayout: UICollectionViewLayout {
             if (showFooter) {
                 
                 let a = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, with: IndexPath(item: 1, section: 0))
-                a.frame = CGRect(x: cellPadding, y: contentHeight + cellPadding, width: UIScreen.main.bounds.width - (cellPadding*2), height: 185)
+                a.frame = CGRect(x: cellPadding, y: contentHeight + cellPadding, width: Constants.kScreenWidth - (cellPadding*2), height: 185)
                 contentHeight = max(contentHeight, a.frame.maxY + cellPadding)
                 cache.append(a)
             }
